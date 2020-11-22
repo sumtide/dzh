@@ -1,0 +1,197 @@
+﻿<ribbonNs:RibbonWindow  x:Class="dzh.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:r="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+        xmlns:ribbonNs="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
+        mc:Ignorable="d"
+        Title="北辰电器老化仪" Width="800"  Height="800" Loaded="Ribbon_Loaded" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="35" />
+        </Grid.RowDefinitions>
+        <Ribbon Name="Ribbon" SelectionChanged="Ribbon_SelectionChanged">
+
+            <!--Ribbon Application Menu-->
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu KeyTip="F"  IsEnabled="False" Visibility="Hidden" Width="0">
+                </RibbonApplicationMenu>
+            </Ribbon.ApplicationMenu>
+            
+            <!--Ribbon Tab #1 Home-->
+            <RibbonTab Header="实时数据" KeyTip="H" Name="current_data">
+                <RibbonGroup Header="操作">
+                    <RibbonButton LargeImageSource="images\Start.png" Label="开始" />
+                    <RibbonButton LargeImageSource="images\Pause.png" Label="暂停" />
+                    <RibbonButton LargeImageSource="images\stop.png" Label="取消" />
+                </RibbonGroup>
+                <RibbonGroup Header="帮助">
+                    <RibbonButton LargeImageSource="images\help.png" Label="使用帮助"  />
+                    <RibbonButton LargeImageSource="images\eletric_meter_ok.png" Label="关于软件"/>
+                </RibbonGroup>
+                <RibbonGroup Header="" HorizontalAlignment="Right"   >
+                    <RibbonButton LargeImageSource="images\logout.png" Label="退出系统" />
+                </RibbonGroup>
+            </RibbonTab>
+
+            <RibbonTab Header="老化任务" KeyTip="V" Name="aged_task" >
+                <RibbonGroup Header="老化" >
+                    <RibbonButton LargeImageSource="images\Start.png" Label="开始老化" />
+                    <RibbonButton LargeImageSource="images\stop.png" Label="取消老化" />
+                </RibbonGroup>
+                <RibbonGroup Header="帮助">
+                    <RibbonButton LargeImageSource="images\help.png" Label="使用帮助" />
+                    <RibbonButton LargeImageSource="images\eletric_meter_ok.png" Label="关于软件" />
+                </RibbonGroup>
+                <RibbonGroup Header="">
+                    <RibbonButton LargeImageSource="images\logout.png" Label="退出系统" />
+
+                </RibbonGroup>
+
+            </RibbonTab>
+            <RibbonTab Header="累计记录" KeyTip="V">
+                <RibbonGroup Header="Home">
+                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
+                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
+                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
+                </RibbonGroup>
+                <RibbonGroup Header="帮助">
+                    <RibbonButton LargeImageSource="images\help.png" Label="使用帮助" />
+                    <RibbonButton LargeImageSource="images\eletric_meter_ok.png" Label="关于软件" />
+                </RibbonGroup>
+                <RibbonGroup Header="">
+                    <RibbonButton LargeImageSource="images\logout.png" Label="退出系统" />
+
+                </RibbonGroup>
+            </RibbonTab>
+
+            <RibbonTab Header="最值记录" KeyTip="V">
+                <RibbonGroup Header="Home">
+                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
+                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
+                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
+                </RibbonGroup>
+                <RibbonGroup Header="帮助">
+                    <RibbonButton LargeImageSource="images\help.png" Label="使用帮助" />
+                    <RibbonButton LargeImageSource="images\eletric_meter_ok.png" Label="关于软件" />
+                </RibbonGroup>
+                <RibbonGroup Header="">
+                    <RibbonButton LargeImageSource="images\logout.png" Label="退出系统" />
+
+                </RibbonGroup>
+            </RibbonTab>
+
+            <RibbonTab Header="事件记录" KeyTip="V">
+                <RibbonGroup Header="Home">
+                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
+                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
+                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
+                </RibbonGroup>
+                <RibbonGroup Header="帮助">
+                    <RibbonButton LargeImageSource="images\help.png" Label="使用帮助" />
+                    <RibbonButton LargeImageSource="images\eletric_meter_ok.png" Label="关于软件" />
+                </RibbonGroup>
+                <RibbonGroup Header="">
+                    <RibbonButton LargeImageSource="images\logout.png" Label="退出系统" />
+
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="控制命令" KeyTip="V">
+                <RibbonGroup Header="Home">
+                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
+                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
+                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
+                </RibbonGroup>
+                <RibbonGroup Header="帮助">
+                    <RibbonButton LargeImageSource="images\help.png" Label="使用帮助" />
+                    <RibbonButton LargeImageSource="images\eletric_meter_ok.png" Label="关于软件" />
+                </RibbonGroup>
+                <RibbonGroup Header="">
+                    <RibbonButton LargeImageSource="images\logout.png" Label="退出系统" />
+
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="工厂定制" KeyTip="V">
+                <RibbonGroup Header="Home">
+                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
+                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
+                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
+                </RibbonGroup>
+                <RibbonGroup Header="帮助">
+                    <RibbonButton LargeImageSource="images\help.png" Label="使用帮助"  />
+                    <RibbonButton LargeImageSource="images\eletric_meter_ok.png" Label="关于软件" />
+                </RibbonGroup>
+                <RibbonGroup Header="">
+                    <RibbonButton LargeImageSource="images\logout.png" Label="退出系统" />
+
+                </RibbonGroup>
+            </RibbonTab>
+
+            <RibbonTab Header="表位管理">
+                <RibbonGroup Header="表位管理">
+                    <RibbonButton LargeImageSource="images\Add.png" Label="增加表位" Name="AddButton" Click="AddButton_Click"/>
+                    <RibbonButton LargeImageSource="images\Delete.png" Label="删除表位"  Name="DeleteButton"/>
+                    <RibbonButton LargeImageSource="images\Edit.png" Label="编辑表位" />
+                </RibbonGroup>
+                <RibbonGroup Header="帮助">
+                    <RibbonButton LargeImageSource="images\help.png" Label="使用帮助" />
+                    <RibbonButton LargeImageSource="images\eletric_meter_ok.png" Label="关于软件" />
+                </RibbonGroup>
+                <RibbonGroup Header="">
+                    <RibbonButton LargeImageSource="images\logout.png" Label="退出系统"  />
+
+                </RibbonGroup>
+            </RibbonTab>
+
+            <RibbonTab Header="参数变量">
+                <RibbonGroup Header="表位管理">
+                    <RibbonButton LargeImageSource="images\Add.png" Label="增加表位" />
+                    <RibbonButton LargeImageSource="images\Delete.png" Label="删除表位" />
+                    <RibbonButton LargeImageSource="images\Edit.png" Label="编辑表位" />
+                </RibbonGroup>
+                <RibbonGroup Header="帮助">
+                    <RibbonButton LargeImageSource="images\help.png" Label="使用帮助" />
+                    <RibbonButton LargeImageSource="images\eletric_meter_ok.png" Label="关于软件" />
+                </RibbonGroup>
+                <RibbonGroup Header="">
+                    <RibbonButton LargeImageSource="images\logout.png" Label="退出系统"   />
+
+                </RibbonGroup>
+            </RibbonTab>
+        </Ribbon>
+        <Grid Name="Car" Grid.Row="1">
+            <TreeView x:Name="TreeView" HorizontalAlignment="Left"   VerticalAlignment="Top">
+                <TreeView.ItemContainerStyle>
+                    <Style TargetType="{x:Type TreeViewItem}">
+                        <Setter Property="Cursor" Value="Hand"/>
+                    </Style>
+                </TreeView.ItemContainerStyle>
+            </TreeView>
+            <GridSplitter  Width ="5" Margin="0,0,0.4,0" />
+            <Frame x:Name="PageContral" Source="PageOne.xaml"   VerticalContentAlignment ="Center"  HorizontalContentAlignment ="Center"  Grid.ColumnSpan="3" Margin="110,0,0,0" NavigationUIVisibility="Hidden"/>
+            <Grid.ContextMenu >
+                <ContextMenu StaysOpen="True" Background="White" Name="cmCheck">
+                    <MenuItem Header="功能一" Name="Funcone" />
+                    <MenuItem Header="功能二"  Name="Functwo" />
+                </ContextMenu>
+            </Grid.ContextMenu>
+        </Grid>
+        <StatusBar Grid.Row="2"  Name="StatusPanel" VerticalAlignment="Bottom">
+            <StatusBarItem>
+                <TextBlock Name="txt_system_status" Text="就绪" Margin="5"  />
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock Name="txt_current_select" Text="当前选择的是：" Margin="5"  />
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock Name="current_select" Text=" " Margin="5"  />
+            </StatusBarItem>
+            <StatusBarItem  HorizontalAlignment="Right">
+                <TextBlock Name="system_time" Text="15:56 2020/10/23" Margin="5" />
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</ribbonNs:RibbonWindow>
