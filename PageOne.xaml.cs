@@ -53,7 +53,11 @@ namespace dzh
             }
         }
         #endregion
-
+        /// <summary>
+        /// 矩阵点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ArrayItem_Selected(object sender, RoutedEventArgs e)
         {
             ArrayView temp = (ArrayView)sender;

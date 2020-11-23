@@ -74,7 +74,7 @@ namespace dzh
         /// <param name="location"></param>
         /// <param name="number"></param>
         /// <returns></returns>
-        private string GetSequence(int id)
+       private string GetSequence(int id)
         {
             StringBuilder sb = new StringBuilder(20);
             DbAccess dbAccess = new DbAccess();

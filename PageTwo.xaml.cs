@@ -22,21 +22,22 @@ namespace dzh
     /// </summary>
     public partial class PageTwo : Page
     {
-        List<Car> itemList = new List<Car>();
+         List<Car> itemList = new List<Car>();
         public PageTwo()
         {
             InitializeComponent();
-            InitItem();
+            var task = Task.Run(() => { InitItem(); });
+            task.Wait();
             CarList.ItemsSource = itemList;
         }
         /// <summary>
         /// 初始化列表成员
         /// </summary>
-        private async void InitItem()
+        public async void InitItem()
         {
             Car car = new Car();
             List<int> fnumber = new List<int>();
-            fnumber.AddRange(await car.GetFItem());          
+            fnumber.AddRange(await car.GetFItem());
             foreach (var e in fnumber)
             {
                 List<int> cnumber = new List<int>();

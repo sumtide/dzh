@@ -32,13 +32,12 @@ namespace dzh
         {
             var tab =Ribbon.SelectedItem as RibbonTab;
             if (tab.Header.ToString() == "老化任务")
-            {
+            {        
                 PageContral.Navigate(new Uri("PageTwo.xaml", UriKind.Relative));
             }
             if (tab.Header.ToString() == "实时数据")
             {
                 PageContral.Navigate(new Uri("PageOne.xaml", UriKind.Relative));
-           
             }
         }
         /// <summary>
@@ -147,7 +146,6 @@ namespace dzh
         {
             PageContral.Navigate(new Uri("PageOne.xaml", UriKind.Relative));
         }
-
         #endregion
 
     }

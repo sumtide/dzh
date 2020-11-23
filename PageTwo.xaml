@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="680"
       Title="PageTwo">
-    <ListView  Background="LightCyan"   d:DesignHeight="500" d:DesignWidth="680"   ItemsSource="{Binding}"  Name="CarList" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+    <ListView  Background="LightCyan"   d:DesignHeight="500" d:DesignWidth="680"   ItemsSource="{Binding}"  Name="CarList" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
         <ListView.ItemContainerStyle>
             <Style TargetType="{x:Type ListViewItem}">
                 <Setter Property="FontSize" Value="15"/>
