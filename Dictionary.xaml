@@ -55,4 +55,22 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--右键菜单-->
+    <ContextMenu x:Key="ItemMenu">
+        <MenuItem Header="老化任务">
+            <MenuItem Header="开始老化"/>
+            <Separator/>
+            <MenuItem Header="暂停老化"/>
+            <Separator/>
+            <MenuItem Header="停止老化"/>
+        </MenuItem>
+        <Separator/>
+        <MenuItem Header="断路器管理">
+            <MenuItem Header="增加断路器"/>
+            <Separator/>
+            <MenuItem Header="跟新断路器"/>
+            <Separator/>
+            <MenuItem Header="删除断路器"/>
+        </MenuItem>
+    </ContextMenu>
 </ResourceDictionary>

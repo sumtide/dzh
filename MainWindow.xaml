@@ -172,12 +172,6 @@
             </TreeView>
             <GridSplitter  Width ="5" Margin="0,0,0.4,0" />
             <Frame x:Name="PageContral" Source="PageOne.xaml"   VerticalContentAlignment ="Center"  HorizontalContentAlignment ="Center"  Grid.ColumnSpan="3" Margin="110,0,0,0" NavigationUIVisibility="Hidden"/>
-            <Grid.ContextMenu >
-                <ContextMenu StaysOpen="True" Background="White" Name="cmCheck">
-                    <MenuItem Header="功能一" Name="Funcone" />
-                    <MenuItem Header="功能二"  Name="Functwo" />
-                </ContextMenu>
-            </Grid.ContextMenu>
         </Grid>
         <StatusBar Grid.Row="2"  Name="StatusPanel" VerticalAlignment="Bottom">
             <StatusBarItem>

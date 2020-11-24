@@ -44,10 +44,11 @@ namespace dzh
                     //实例化物体
                     ArrayView arrayView = new ArrayView();
                     arrayView.Style = FindResource("CommonItem") as Style;
+                    arrayView.ContextMenu = FindResource("ItemMenu") as ContextMenu;
                     arrayView.Number = await car.GetID(e);
                     arrayView.Icon = new BitmapImage(new Uri("images/ss.png", UriKind.Relative));
                     arrayView.Text = "老化车" + e + " " + s + "号表位";
-                    arrayView.Selected += ArrayItem_Selected;
+                    arrayView.MouseDoubleClick += ArrayItem_MouseDoubleClick;
                     ArrayViewPanel.Items.Add(arrayView);
                 }
             }
@@ -58,15 +59,13 @@ namespace dzh
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ArrayItem_Selected(object sender, RoutedEventArgs e)
+        private void ArrayItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             ArrayView temp = (ArrayView)sender;
             Car car = new Car();
             MainWindow window = (MainWindow)Window.GetWindow(this);
             car.ShowMessageEvent += new Car.ShowMessage(window.OpenMessage);
             car.SendEvent(temp.Text);
-
-
         }
     }
 }

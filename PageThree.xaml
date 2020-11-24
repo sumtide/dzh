@@ -13,11 +13,9 @@
                 <RowDefinition Height="50*"/>
                 <RowDefinition Height="600*"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
-                <ListBox HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15">
-                    <Button  Height="50" Width="300" Name="LabelName" Click="LabelName_Click"/>
-                </ListBox>
-            </Grid>
+            <ListBox HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+                <Button  Height="40" Width="400" x:Name="LabelName" Click="LabelName_Click" Background="White"/>
+            </ListBox>
             <Grid Grid.Row="1" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="200*"/>
@@ -28,21 +26,21 @@
                     <ColumnDefinition Width="340*"/>
                     <ColumnDefinition Width="340*"/>
                 </Grid.ColumnDefinitions>
-                <ListBox Grid.Row="0" Grid.Column="0" >
-                    <Canvas Background="White">
+                <ListBox  Grid.Row="0" Grid.Column="0" >
+                    <Canvas Background="White" >
                         <Label Content="当前电压值"/>
                         <TextBlock Canvas.Left="45"  Text="A相电压值" Canvas.Top="30" Height="30" Width="70" TextAlignment="Center"/>
                         <TextBlock Canvas.Left="45"  Text="B相电压值" Canvas.Top="60" Height="30" Width="70" TextAlignment="Center"/>
                         <TextBlock Canvas.Left="45"  Text="C相电压值" Canvas.Top="90" Height="30" Width="70" TextAlignment="Center"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="25" Width="120"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="54" Width="120"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="84" Width="120"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="25" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="54" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="84" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
                         <Button Content="读取" Canvas.Left="272" Canvas.Top="28" Width="50" Height="20"/>
                         <Button Content="读取" Canvas.Left="272" Canvas.Top="58" Width="50" Height="20"/>
                         <Button Content="读取" Canvas.Left="272" Canvas.Top="87" Width="50" Height="20"/>
-                        <Label Content="V" Canvas.Left="240" Canvas.Top="26" Width="25" />
-                        <Label Content="V" Canvas.Left="240" Canvas.Top="53" Width="25"/>
-                        <Label Content="V" Canvas.Left="240" Canvas.Top="84" Width="25"/>
+                        <Label Content="V" Canvas.Left="247" Canvas.Top="26" Width="25" />
+                        <Label Content="V" Canvas.Left="247" Canvas.Top="55" Width="25"/>
+                        <Label Content="V" Canvas.Left="247" Canvas.Top="86" Width="25"/>
                     </Canvas>
                 </ListBox>
                 <ListBox Grid.Row="0" Grid.Column="1" >
@@ -50,11 +48,11 @@
                         <Label Content="剩余电压值" />
                         <TextBlock  Text="实时剩余电流值" Canvas.Top="31" Height="30" Width="115" TextAlignment="Center"/>
                         <TextBlock  Text="实时剩余电流最大相" Canvas.Top="60" Height="30" Width="115" TextAlignment="Center"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="25" Width="120"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="55" Width="120"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="25" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="55" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
                         <Button Content="读取" Canvas.Left="272" Canvas.Top="29" Width="50" Height="20"/>
                         <Button Content="读取" Canvas.Left="272" Canvas.Top="60" Width="50" Height="20"/>
-                        <Label Content="mA" Canvas.Left="240" Canvas.Top="30" Width="25"  FontSize="8"/>
+                        <Label Content="mA" Canvas.Left="247" Canvas.Top="30" Width="25"  FontSize="8"/>
                     </Canvas>
                 </ListBox>
                 <ListBox Grid.Row="1" Grid.Column="0" >
@@ -63,9 +61,9 @@
                         <TextBlock Canvas.Left="45"  Text="A相电流值" Canvas.Top="30" Height="30" Width="70" TextAlignment="Center"/>
                         <TextBlock Canvas.Left="45"  Text="B相电流值" Canvas.Top="60" Height="30" Width="70" TextAlignment="Center"/>
                         <TextBlock Canvas.Left="45"  Text="C相电流值" Canvas.Top="90" Height="30" Width="70" TextAlignment="Center"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="25" Width="120"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="54" Width="120"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="84" Width="120"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="25" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="54" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="84" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
                         <Button Content="读取" Canvas.Left="270" Canvas.Top="28" Width="50" Height="20"/>
                         <Button Content="读取" Canvas.Left="270" Canvas.Top="58" Width="50" Height="20"/>
                         <Button Content="读取" Canvas.Left="270" Canvas.Top="87" Width="50" Height="20" RenderTransformOrigin="0.572,0.22"/>
@@ -79,12 +77,12 @@
                         <Label Content="剩余电流值"/>
                         <TextBlock  Text="极限电流动作值" Canvas.Top="31" Height="30" Width="115" TextAlignment="Center"/>
                         <TextBlock  Text="极限不驱动时间" Canvas.Top="60" Height="30" Width="115" TextAlignment="Center"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="25" Width="120"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="55" Width="120"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="25" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="55" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
                         <Button Content="读取" Canvas.Left="272" Canvas.Top="31" Width="50" Height="20"/>
                         <Button Content="读取" Canvas.Left="272" Canvas.Top="58" Width="50" Height="20"/>
-                        <Label Content="mA" Canvas.Left="240" Canvas.Top="30" Width="25" FontSize="8"/>
-                        <Label Content="mS" Canvas.Left="240" Canvas.Top="60" Width="25" FontSize="8"/>
+                        <Label Content="mA" Canvas.Left="245" Canvas.Top="30" Width="25" FontSize="8"/>
+                        <Label Content="mS" Canvas.Left="245" Canvas.Top="60" Width="25" FontSize="8"/>
                     </Canvas>
                 </ListBox>
                 <ListBox Grid.Row="2" Grid.Column="0"  >
@@ -94,10 +92,10 @@
                         <TextBlock Canvas.Left="45"  Text="A相电流" Canvas.Top="60" Height="30" Width="70" TextAlignment="Center"/>
                         <TextBlock Canvas.Left="45"  Text="B相电流" Canvas.Top="90" Height="30" Width="70" TextAlignment="Center"/>
                         <TextBlock Canvas.Left="45"  Text="C相电流" Canvas.Top="120" Height="30" Width="70" TextAlignment="Center"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="25" Width="120"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="54" Width="120"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="84" Width="120"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="114" Width="120"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="25" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="54" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="84" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="114" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
                         <Button Content="读取" Canvas.Left="272" Canvas.Top="29" Width="50" Height="20"/>
                         <Button Content="读取" Canvas.Left="272" Canvas.Top="60" Width="50" Height="20"/>
                         <Button Content="读取" Canvas.Left="272" Canvas.Top="87" Width="50" Height="20"/>
@@ -112,8 +110,8 @@
                         <Label Content="设备当前状态信息" />
                         <TextBlock Canvas.Left="45"  Text="状态子1" Canvas.Top="30" Height="30" Width="70" TextAlignment="Center"/>
                         <TextBlock Canvas.Left="45"  Text="状态子2" Canvas.Top="60" Height="30" Width="70" TextAlignment="Center"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="25" Width="120"/>
-                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="55" Width="120"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="25" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="55" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
                         <Button Content="读取" Canvas.Left="272" Canvas.Top="31" Width="50" Height="20"/>
                         <Button Content="读取" Canvas.Left="272" Canvas.Top="60" Width="50" Height="20"/>
                         <Label Content="V" Canvas.Left="247" Canvas.Top="29" Width="25" />

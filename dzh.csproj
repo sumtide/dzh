@@ -61,7 +61,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="class\DataBase\Thread线程管理\BaseThread.cs" />
+    <Compile Include="class\Thread线程管理\BaseThread.cs" />
     <Compile Include="class\ArrayView.cs" />
     <Compile Include="class\DbAccess.cs" />
     <Compile Include="class\MessageEventArgs.cs" />
@@ -79,7 +79,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="class\Car.cs" />
-    <Compile Include="class\DataBase\Thread线程管理\Worker.cs" />
+    <Compile Include="class\Thread线程管理\Worker.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

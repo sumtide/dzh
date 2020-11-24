@@ -22,7 +22,7 @@
                 </Style.Triggers>
             </Style>
         </ListView.ItemContainerStyle>
-        
+
         <ListView.View>
             <GridView>
                 <GridViewColumn Header="车位" Width="120" DisplayMemberBinding="{Binding Path=location }" />

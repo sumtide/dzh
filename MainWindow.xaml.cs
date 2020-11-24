@@ -123,6 +123,7 @@ namespace dzh
                     TreeViewWithIcons cnode = new TreeViewWithIcons();
                     cnode.HeaderText = s + "号表位";
                     cnode.Icon = new BitmapImage(new Uri("Images/powerTower2.png", UriKind.Relative));
+                    cnode.ContextMenu = FindResource("ItemMenu") as ContextMenu;
                     cnode.Selected += TreeItem_Selected;
                     cnode.Unselected += TreeItem_Unselected;
                     fnode.Items.Add(cnode);
