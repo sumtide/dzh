@@ -13,9 +13,9 @@
                 <RowDefinition Height="50*"/>
                 <RowDefinition Height="600*"/>
             </Grid.RowDefinitions>
-            <ListBox HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+            <GroupBox HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
                 <Button  Height="40" Width="400" x:Name="LabelName" Click="LabelName_Click" Background="White"/>
-            </ListBox>
+            </GroupBox>
             <Grid Grid.Row="1" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="200*"/>
@@ -26,9 +26,13 @@
                     <ColumnDefinition Width="340*"/>
                     <ColumnDefinition Width="340*"/>
                 </Grid.ColumnDefinitions>
-                <ListBox  Grid.Row="0" Grid.Column="0" >
+                <GroupBox  Grid.Row="0" Grid.Column="0"  >
+                    <GroupBox.Header>
+                        <Border Background="LightBlue" BorderBrush="Orange" BorderThickness="2" Padding="5">
+                            <Label Content="当前电压值" Background="White"/>
+                        </Border>
+                    </GroupBox.Header>
                     <Canvas Background="White" >
-                        <Label Content="当前电压值"/>
                         <TextBlock Canvas.Left="45"  Text="A相电压值" Canvas.Top="30" Height="30" Width="70" TextAlignment="Center"/>
                         <TextBlock Canvas.Left="45"  Text="B相电压值" Canvas.Top="60" Height="30" Width="70" TextAlignment="Center"/>
                         <TextBlock Canvas.Left="45"  Text="C相电压值" Canvas.Top="90" Height="30" Width="70" TextAlignment="Center"/>
@@ -42,10 +46,14 @@
                         <Label Content="V" Canvas.Left="247" Canvas.Top="55" Width="25"/>
                         <Label Content="V" Canvas.Left="247" Canvas.Top="86" Width="25"/>
                     </Canvas>
-                </ListBox>
-                <ListBox Grid.Row="0" Grid.Column="1" >
+                </GroupBox>
+                <GroupBox Grid.Row="0" Grid.Column="1"  >
+                    <GroupBox.Header>
+                        <Border Background="LightBlue" BorderBrush="Orange" BorderThickness="2" Padding="5">
+                            <Label Content="剩余电压值" Background="White"/>
+                        </Border>
+                    </GroupBox.Header>
                     <Canvas Background="White">
-                        <Label Content="剩余电压值" />
                         <TextBlock  Text="实时剩余电流值" Canvas.Top="31" Height="30" Width="115" TextAlignment="Center"/>
                         <TextBlock  Text="实时剩余电流最大相" Canvas.Top="60" Height="30" Width="115" TextAlignment="Center"/>
                         <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="25" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
@@ -54,10 +62,14 @@
                         <Button Content="读取" Canvas.Left="272" Canvas.Top="60" Width="50" Height="20"/>
                         <Label Content="mA" Canvas.Left="247" Canvas.Top="30" Width="25"  FontSize="8"/>
                     </Canvas>
-                </ListBox>
-                <ListBox Grid.Row="1" Grid.Column="0" >
+                </GroupBox>
+                <GroupBox Grid.Row="1" Grid.Column="0" >
+                    <GroupBox.Header>
+                        <Border Background="LightBlue" BorderBrush="Orange" BorderThickness="2" Padding="5">
+                            <Label Content="当前电流值" Background="White"/>
+                        </Border>
+                    </GroupBox.Header>
                     <Canvas Background="White">
-                        <Label Content="当前电流值"/>
                         <TextBlock Canvas.Left="45"  Text="A相电流值" Canvas.Top="30" Height="30" Width="70" TextAlignment="Center"/>
                         <TextBlock Canvas.Left="45"  Text="B相电流值" Canvas.Top="60" Height="30" Width="70" TextAlignment="Center"/>
                         <TextBlock Canvas.Left="45"  Text="C相电流值" Canvas.Top="90" Height="30" Width="70" TextAlignment="Center"/>
@@ -71,10 +83,14 @@
                         <Label Content="A" Canvas.Left="245" Canvas.Top="55" Width="25"/>
                         <Label Content="A" Canvas.Left="245" Canvas.Top="87" Width="25" RenderTransformOrigin="0.152,0.766"/>
                     </Canvas>
-                </ListBox>
-                <ListBox Grid.Row="1" Grid.Column="1" >
+                </GroupBox>
+                <GroupBox Grid.Row="1" Grid.Column="1" >
+                    <GroupBox.Header>
+                        <Border Background="LightBlue" BorderBrush="Orange" BorderThickness="2" Padding="5">
+                            <Label Content="剩余电流值" Background="White"/>
+                        </Border>
+                    </GroupBox.Header>
                     <Canvas Background="White">
-                        <Label Content="剩余电流值"/>
                         <TextBlock  Text="极限电流动作值" Canvas.Top="31" Height="30" Width="115" TextAlignment="Center"/>
                         <TextBlock  Text="极限不驱动时间" Canvas.Top="60" Height="30" Width="115" TextAlignment="Center"/>
                         <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="25" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
@@ -84,10 +100,14 @@
                         <Label Content="mA" Canvas.Left="245" Canvas.Top="30" Width="25" FontSize="8"/>
                         <Label Content="mS" Canvas.Left="245" Canvas.Top="60" Width="25" FontSize="8"/>
                     </Canvas>
-                </ListBox>
-                <ListBox Grid.Row="2" Grid.Column="0"  >
+                </GroupBox>
+                <GroupBox Grid.Row="2" Grid.Column="0"  >
+                    <GroupBox.Header>
+                        <Border Background="LightBlue" BorderBrush="Orange" BorderThickness="2" Padding="5">
+                            <Label Content="当前电流Ⅱ" Background="White"/>
+                        </Border>
+                    </GroupBox.Header>
                     <Canvas Background="White">
-                        <Label Content="当前电流Ⅱ"/>
                         <TextBlock  Text="三相电流方向" Canvas.Top="31" Height="30" Width="70" TextAlignment="Center" Canvas.Left="45"/>
                         <TextBlock Canvas.Left="45"  Text="A相电流" Canvas.Top="60" Height="30" Width="70" TextAlignment="Center"/>
                         <TextBlock Canvas.Left="45"  Text="B相电流" Canvas.Top="90" Height="30" Width="70" TextAlignment="Center"/>
@@ -104,10 +124,14 @@
                         <Label Content="A" Canvas.Left="245" Canvas.Top="87" Width="25"/>
                         <Label Content="A" Canvas.Left="245" Canvas.Top="115" Width="25" RenderTransformOrigin="1.016,0.156"/>
                     </Canvas>
-                </ListBox>
-                <ListBox Grid.Row="2" Grid.Column="1"  >
+                </GroupBox>
+                <GroupBox Grid.Row="2" Grid.Column="1"  >
+                    <GroupBox.Header>
+                        <Border Background="LightBlue" BorderBrush="Orange" BorderThickness="2" Padding="5">
+                            <Label Content="设备当前状态信息" Background="White"/>
+                        </Border>
+                    </GroupBox.Header>
                     <Canvas Background="White">
-                        <Label Content="设备当前状态信息" />
                         <TextBlock Canvas.Left="45"  Text="状态子1" Canvas.Top="30" Height="30" Width="70" TextAlignment="Center"/>
                         <TextBlock Canvas.Left="45"  Text="状态子2" Canvas.Top="60" Height="30" Width="70" TextAlignment="Center"/>
                         <TextBox Height="30" Canvas.Left="120" TextWrapping="Wrap"  Canvas.Top="25" Width="120" VerticalContentAlignment="Center" IsReadOnly="True"/>
@@ -123,7 +147,7 @@
                         <CheckBox Content="复失电" Canvas.Left="240" Canvas.Top="95" IsHitTestVisible="False"/>
                         <CheckBox Content="动作标识" Canvas.Left="240" Canvas.Top="130" IsHitTestVisible="False"/>
                     </Canvas>
-                </ListBox>
+                </GroupBox>
             </Grid>
         </Grid>
     </Border>
