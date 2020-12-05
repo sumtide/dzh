@@ -5,8 +5,8 @@
     <Style TargetType="{x:Type Button}" x:Key="CommonButtonStyle">
         <Setter Property="Background" Value="#FFE2E2E2"/>
         <Setter Property="BorderBrush" Value="#20000000"/>
-        <Setter Property="MinWidth" Value="90"/>
         <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontFamily" Value="Microsoft YaHei"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -30,8 +30,8 @@
     </Style>
     <!--老化车矩阵子物体排列样式-->
     <Style TargetType="ListBoxItem" x:Key="CommonItem">
-        <Setter Property="Background" Value="LightSkyBlue"/>
-        <Setter Property="BorderBrush" Value="White"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="Black"/>
         <Setter Property="FontSize"  Value="9"/>
         <Setter Property="Width" Value="100"/>
         <Setter Property="Height" Value="100"/>
@@ -73,4 +73,34 @@
             <MenuItem Header="删除断路器"/>
         </MenuItem>
     </ContextMenu>
+<!--标题样式字典-->
+    <Style TargetType="{x:Type TabItem}" x:Key="tabitem">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Grid>
+                        <Border Name="Border"  Margin="0,0,0,0" Background="SkyBlue" BorderBrush="White"  BorderThickness="1,1,1,1" CornerRadius="0,0,15,0" Width="80" >
+                            <ContentPresenter x:Name="ContentSite"  VerticalAlignment="Center"  HorizontalAlignment="Center" ContentSource="Header" Margin="4,12,4,4" RecognizesAccessKey="True">
+                            </ContentPresenter>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Panel.ZIndex" Value="100" />
+                            <Setter TargetName="Border" Property="Background" >
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="White"  Offset="0" />
+                                        <GradientStop Color="LightBlue"  Offset="1" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="1,1,1,0" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="Orange"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

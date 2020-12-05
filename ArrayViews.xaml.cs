@@ -19,9 +19,9 @@ namespace dzh
     /// <summary>
     /// PageOne.xaml 的交互逻辑
     /// </summary>
-    public partial class PageOne : Page
+    public partial class ArrayViews : Page
     {
-        public PageOne()
+        public ArrayViews()
         {
             InitializeComponent();
             InitItem();

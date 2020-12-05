@@ -18,10 +18,10 @@ namespace dzh
     /// <summary>
     /// PageThree.xaml 的交互逻辑
     /// </summary>
-    public partial class PageThree : Page
+    public partial class ItemMessage : Page
     {
         public  static  string labelNameText { get; set; }
-        public PageThree()
+        public ItemMessage()
         {
             InitializeComponent();
             LabelName.Content = labelNameText;

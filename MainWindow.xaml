@@ -6,7 +6,7 @@
         xmlns:r="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
         xmlns:ribbonNs="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
         mc:Ignorable="d"
-        Title="北辰电器老化仪" Width="800"  Height="800" Loaded="Ribbon_Loaded" >
+        Title="北辰电器老化仪" Width="800"  Height="800" Loaded="Ribbon_Loaded"  >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -52,7 +52,7 @@
                 </RibbonGroup>
 
             </RibbonTab>
-            <RibbonTab Header="累计记录" KeyTip="V">
+            <RibbonTab Header="记录统计" KeyTip="V">
                 <RibbonGroup Header="Home">
                     <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
                     <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
@@ -68,37 +68,6 @@
                 </RibbonGroup>
             </RibbonTab>
 
-            <RibbonTab Header="最值记录" KeyTip="V">
-                <RibbonGroup Header="Home">
-                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
-                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
-                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
-                </RibbonGroup>
-                <RibbonGroup Header="帮助">
-                    <RibbonButton LargeImageSource="images\help.png" Label="使用帮助" />
-                    <RibbonButton LargeImageSource="images\eletric_meter_ok.png" Label="关于软件" />
-                </RibbonGroup>
-                <RibbonGroup Header="">
-                    <RibbonButton LargeImageSource="images\logout.png" Label="退出系统" />
-
-                </RibbonGroup>
-            </RibbonTab>
-
-            <RibbonTab Header="事件记录" KeyTip="V">
-                <RibbonGroup Header="Home">
-                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
-                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
-                    <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
-                </RibbonGroup>
-                <RibbonGroup Header="帮助">
-                    <RibbonButton LargeImageSource="images\help.png" Label="使用帮助" />
-                    <RibbonButton LargeImageSource="images\eletric_meter_ok.png" Label="关于软件" />
-                </RibbonGroup>
-                <RibbonGroup Header="">
-                    <RibbonButton LargeImageSource="images\logout.png" Label="退出系统" />
-
-                </RibbonGroup>
-            </RibbonTab>
             <RibbonTab Header="控制命令" KeyTip="V">
                 <RibbonGroup Header="Home">
                     <RibbonButton LargeImageSource="images\Start.png" Label="Delete" />
@@ -163,15 +132,16 @@
             </RibbonTab>
         </Ribbon>
         <Grid Name="Car" Grid.Row="1">
-            <TreeView x:Name="TreeView" HorizontalAlignment="Left"   VerticalAlignment="Top">
+            <TreeView x:Name="TreeView" HorizontalAlignment="Left"   VerticalAlignment="Top" BorderThickness="0">
                 <TreeView.ItemContainerStyle>
                     <Style TargetType="{x:Type TreeViewItem}">
                         <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="IsExpanded" Value="True"/>
                     </Style>
                 </TreeView.ItemContainerStyle>
             </TreeView>
             <GridSplitter  Width ="5" Margin="0,0,0.4,0" />
-            <Frame x:Name="PageContral" Source="PageOne.xaml"   VerticalContentAlignment ="Center"  HorizontalContentAlignment ="Center"  Grid.ColumnSpan="3" Margin="110,0,0,0" NavigationUIVisibility="Hidden"/>
+            <Frame x:Name="PageContral" Source="ArrayViews.xaml"   VerticalContentAlignment ="Center"  HorizontalContentAlignment ="Center"  Grid.ColumnSpan="3" Margin="115,0,0,0" NavigationUIVisibility="Hidden"/>
         </Grid>
         <StatusBar Grid.Row="2"  Name="StatusPanel" VerticalAlignment="Bottom">
             <StatusBarItem>

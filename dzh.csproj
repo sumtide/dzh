@@ -66,6 +66,9 @@
     <Compile Include="class\DbAccess.cs" />
     <Compile Include="class\MessageEventArgs.cs" />
     <Compile Include="class\TreeViewWithIcons.cs" />
+    <Compile Include="RecordView.xaml.cs">
+      <DependentUpon>RecordView.xaml</DependentUpon>
+    </Compile>
     <Page Include="Dictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -84,35 +87,39 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ArrayViews.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListViews.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="OperationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PageOne.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PageThree.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PageTwo.xaml">
+    <Page Include="RecordView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayViews.xaml.cs">
+      <DependentUpon>ArrayViews.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemMessage.xaml.cs">
+      <DependentUpon>ItemMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListViews.xaml.cs">
+      <DependentUpon>ListViews.xaml</DependentUpon>
+    </Compile>
     <Compile Include="OperationView.xaml.cs">
       <DependentUpon>OperationView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PageOne.xaml.cs">
-      <DependentUpon>PageOne.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PageThree.xaml.cs">
-      <DependentUpon>PageThree.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PageTwo.xaml.cs">
-      <DependentUpon>PageTwo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

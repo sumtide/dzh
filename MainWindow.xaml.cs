@@ -33,11 +33,15 @@ namespace dzh
             var tab =Ribbon.SelectedItem as RibbonTab;
             if (tab.Header.ToString() == "老化任务")
             {        
-                PageContral.Navigate(new Uri("PageTwo.xaml", UriKind.Relative));
+                PageContral.Navigate(new Uri("ListViews.xaml", UriKind.Relative));
             }
             if (tab.Header.ToString() == "实时数据")
             {
-                PageContral.Navigate(new Uri("PageOne.xaml", UriKind.Relative));
+                PageContral.Navigate(new Uri("ArrayViews.xaml", UriKind.Relative));
+            }
+            if (tab.Header.ToString() == "记录统计")
+            {
+                PageContral.Navigate(new Uri("RecordView.xaml", UriKind.Relative));
             }
         }
         /// <summary>
@@ -127,6 +131,10 @@ namespace dzh
                     cnode.Selected += TreeItem_Selected;
                     cnode.Unselected += TreeItem_Unselected;
                     fnode.Items.Add(cnode);
+                    if (e == 1 && s == 1)
+                    {
+                        cnode.IsSelected = true;
+                    }
                 }
             }
         }
@@ -137,15 +145,15 @@ namespace dzh
         /// <param name="e"></param>
         public void OpenMessage(object sender,MessageEventArgs e)
         {
-            PageThree.labelNameText = e.Message;
-            PageContral.Navigate(new Uri("PageThree.xaml", UriKind.Relative));
+            ItemMessage.labelNameText = e.Message;
+            PageContral.Navigate(new Uri("ItemMessage.xaml", UriKind.Relative));
         }
         /// <summary>
         /// 返回导航首页
         /// </summary>
         public void Return()
         {
-            PageContral.Navigate(new Uri("PageOne.xaml", UriKind.Relative));
+            PageContral.Navigate(new Uri("ArrayViews.xaml", UriKind.Relative));
         }
         #endregion
 

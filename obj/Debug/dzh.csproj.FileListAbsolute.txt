@@ -20,9 +20,11 @@ D:\vsworkspace\dzh\obj\Debug\dzh_MarkupCompile.lref
 D:\vsworkspace\dzh\obj\Debug\App.baml
 D:\vsworkspace\dzh\obj\Debug\Dictionary.baml
 D:\vsworkspace\dzh\obj\Debug\OperationView.baml
-D:\vsworkspace\dzh\obj\Debug\PageOne.g.cs
-D:\vsworkspace\dzh\obj\Debug\PageOne.baml
-D:\vsworkspace\dzh\obj\Debug\PageTwo.g.cs
-D:\vsworkspace\dzh\obj\Debug\PageTwo.baml
-D:\vsworkspace\dzh\obj\Debug\PageThree.g.cs
-D:\vsworkspace\dzh\obj\Debug\PageThree.baml
+D:\vsworkspace\dzh\obj\Debug\ArrayViews.g.cs
+D:\vsworkspace\dzh\obj\Debug\ItemMessage.g.cs
+D:\vsworkspace\dzh\obj\Debug\ListViews.g.cs
+D:\vsworkspace\dzh\obj\Debug\ArrayViews.baml
+D:\vsworkspace\dzh\obj\Debug\ItemMessage.baml
+D:\vsworkspace\dzh\obj\Debug\ListViews.baml
+D:\vsworkspace\dzh\obj\Debug\RecordView.g.cs
+D:\vsworkspace\dzh\obj\Debug\RecordView.baml

@@ -5,39 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dzh"
         mc:Ignorable="d"
-        Title="OperationView" Height="400" Width="600" ResizeMode="CanMinimize">
-    <Canvas>
-        <Image Source="images/ss.png" Margin="0,50,0,0"/>
-            <Label Margin="350,20,0,0">新增表位信息</Label>
-        <Grid  Margin="250,50,0,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="5"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="5"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="5"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="5"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition  Width="200"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock Text="老化车号" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
-            <TextBox Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center"/>
-            <TextBlock Text="表位编号" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
-            <TextBox Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" />
-            <TextBlock Text="串口编号" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
-            <TextBox Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Center" />
-            <TextBlock Text="波特率" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center"/>
-            <ComboBox Grid.Row="6" Grid.Column="1" VerticalContentAlignment="Center">
-                <ComboBoxItem Content="6400" VerticalAlignment="Center"/>
-                <ComboBoxItem Content="3200" VerticalAlignment="Center"/>
-            </ComboBox>
-        </Grid>
-        <Button Width="100" Height="50"  Margin="450,250,0,0" Content="取消" Style="{DynamicResource CommonButtonStyle}"/>
-        <Button Width="100" Height="50"  Margin="250,250,0,0" Content="确认" Style="{DynamicResource CommonButtonStyle}"/>
-
-    </Canvas>
+        Title="OperationView" Height="300" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="300*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox  Grid.Column="0">
+            <Image Source="images/ss.png"  Width="200" Height="200" />
+        </GroupBox>
+        <GroupBox Grid.Column="1" Header="新增表位信息">
+            <Grid  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="老化车号" Grid.Row="0"  VerticalAlignment="Center"/>
+                <TextBox Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center" Margin="100,0,0,0" Height="30"/>
+                <TextBlock Text="表位编号" Grid.Row="2"  VerticalAlignment="Center"/>
+                <TextBox Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" Margin="100,0,0,0" Height="30"/>
+                <TextBlock Text="串口编号" Grid.Row="4"  VerticalAlignment="Center"/>
+                <TextBox Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Center" Margin="100,0,0,0" Height="30"/>
+                <TextBlock Text="波特率" Grid.Row="6"  VerticalAlignment="Center"/>
+                <ComboBox Grid.Row="6" Grid.Column="1" VerticalContentAlignment="Center" Margin="100,0,0,0" Height="30" >
+                    <ComboBoxItem Content="6400" VerticalAlignment="Center"/>
+                    <ComboBoxItem Content="3200" VerticalAlignment="Center"/>
+                </ComboBox>
+                <Button Width="100" Height="50"   Content="取消" Style="{DynamicResource CommonButtonStyle}" Grid.Row="8"  Margin="150,0,0,0"/>
+                <Button Width="100" Height="50"   Content="确认" Style="{DynamicResource CommonButtonStyle}" Grid.Row="8" Margin="0,0,150,0"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
 </Window>

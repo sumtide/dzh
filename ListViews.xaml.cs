@@ -20,10 +20,10 @@ namespace dzh
     /// <summary>
     /// PageTwo.xaml 的交互逻辑
     /// </summary>
-    public partial class PageTwo : Page
+    public partial class ListViews : Page
     {
          List<Car> itemList = new List<Car>();
-        public PageTwo()
+        public ListViews()
         {
             InitializeComponent();
             var task = Task.Run(() => { InitItem(); });
